@@ -71,8 +71,9 @@ header h1 {
   text-shadow: rgba(255, 255, 255, 0.9) 0 1px 0;
 }
 header.without-description h1 {
-  margin: 10px 0;
   background: url('../images/featherweight-logo-1024.png') no-repeat;
+  background-size: contain;
+  height: 100px;
   text-indent: 100%;
   white-space: nowrap;
   overflow: hidden;
