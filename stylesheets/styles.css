@@ -57,16 +57,10 @@ header {
   -ms-border-radius: 8px 8px 0 0;
   -o-border-radius: 8px 8px 0 0;
   border-radius: 8px 8px 0 0;
-  background: #C6EAFA;
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ddfbfc), color-stop(100%, #c6eafa));
-  background: -webkit-linear-gradient(#ddfbfc, #c6eafa);
-  background: -moz-linear-gradient(#ddfbfc, #c6eafa);
-  background: -o-linear-gradient(#ddfbfc, #c6eafa);
-  background: -ms-linear-gradient(#ddfbfc, #c6eafa);
-  background: linear-gradient(#ddfbfc, #c6eafa);
+  background: url('../images/subtle-patterns-net.png') #EEE;
   position: relative;
   padding: 15px 20px;
-  border-bottom: 1px solid #B2D2E1;
+  border-bottom: 1px solid #CCC;
 }
 header h1 {
   margin: 0;
@@ -78,6 +72,10 @@ header h1 {
 }
 header.without-description h1 {
   margin: 10px 0;
+  background: url('../images/featherweight-logo-1024.png') no-repeat;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
 }
 header p {
   margin: 0;
