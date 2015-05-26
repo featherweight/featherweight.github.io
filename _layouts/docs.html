@@ -1,0 +1,32 @@
+---
+layout: default
+---
+
+  <section class="docs">
+    <div class="grid">
+
+      <div class="unit four-fifths">
+        <article>
+          <div class="improve right hide-on-mobiles">
+            <a href="https://github.com/featherweight/featherweight/edit/master/site/{{ page.path }}"><i class="fa fa-pencil"></i> &nbsp;Improve this page</a>
+          </div>
+          <h1>{{ page.title }}</h1>
+          {{ content }}
+          
+          <div class="doc-authors">
+            <p class="meta">Page authors:</p>
+            {% for author in page.authors %}
+                <p class="doc-author">{{ author }}</p>
+            {% endfor %}  
+          </div>
+          {% include section_nav.html %}
+        </article>
+      </div>
+
+      {% include docs_contents_mobile.html %}
+      {% include docs_contents.html %}
+
+      <div class="clear"></div>
+
+    </div>
+  </section>

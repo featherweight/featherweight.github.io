@@ -1,0 +1,13 @@
+markdown: kramdown
+highlighter: pygments
+permalink: /news/:year/:month/:day/:title/
+excerpt_separator: ""
+
+repository: https://github.com/featherweight/featherweight
+help_url: https://github.com/featherweight/featherweight
+
+tagline: "Featherweight: Application Framework for LabVIEW™"
+
+collections:
+  docs:
+    output: true
