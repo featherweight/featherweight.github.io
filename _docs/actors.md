@@ -5,7 +5,7 @@ permalink: /concepts/actors/
 authors:
   - Jack R. Dunaway
 editors:
-  - placeholder
+  - Eric Metzler
 ---
 
 Featherweight provides an Actor Reference Design implementation
