@@ -27,8 +27,6 @@
   - /docs/ftw-actor-logger/
   - /docs/ftw-actor-scheduler/
   - /docs/ftw-actor-support/
-  - /docs/ftw-actor-socket-client/
-  - /docs/ftw-actor-socket-server/
   - /docs/ftw-actor-socket-publisher/
   - /docs/ftw-actor-socket-subscriber/
   - /docs/ftw-actor-socket-producer/
