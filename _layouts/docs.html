@@ -19,6 +19,13 @@ layout: default
                 <p class="doc-author">{{ author }}</p>
             {% endfor %}  
           </div>
+          
+          <div class="doc-authors">
+            <p class="meta">Page editors:</p>
+            {% for editor in page.editors %}
+                <p class="doc-author">{{ editor }}</p>
+            {% endfor %}  
+          </div>
           {% include section_nav.html %}
         </article>
       </div>
