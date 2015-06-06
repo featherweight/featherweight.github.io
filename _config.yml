@@ -11,3 +11,11 @@ tagline: "Featherweight: Application Framework for LabVIEW™"
 collections:
   docs:
     output: true
+
+gems:
+- jekyll-mentions
+- jekyll-redirect-from
+- jekyll-sitemap
+
+exclude:
+ - "*.esproj"
