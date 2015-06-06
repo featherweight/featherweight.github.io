@@ -15,3 +15,14 @@ Jack R. Dunaway <jack@wirebirdlabs.com>
 {% for author in site.github.contributors %}
   * [{{ author.login }}]({{ author.url }})
 {% endfor %}
+
+{{ site.github }}
+
+
+<ul>
+{% for contributor in site.github.contributors %}
+  <li>
+    <img src="{{ contributor.avatar_url }}" width="32" height="32" /> {{ contributor.login }}
+  </li>
+{% endfor %}
+</ul>
