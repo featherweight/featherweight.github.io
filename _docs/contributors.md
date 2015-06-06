@@ -12,6 +12,8 @@ The following individuals have contributed to Featherweight (order randomized on
 
 Jack R. Dunaway <jack@wirebirdlabs.com>
 
+{{ page }}
+
 {% for author in site.github.contributors %}
   * [{{ author.login }}]({{ author.url }})
 {% endfor %}
