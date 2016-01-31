@@ -3,7 +3,7 @@ layout: news_item
 title: 'Join the Discussion at Jekyll Talk'
 date: 2015-02-26 21:06:51 -0800
 author: alfredxing
-categories: [community]
+categories: [community, test, test2]
 ---
 
 We're super excited to announce the launch of [Jekyll Talk](https://talk.jekyllrb.com), a Discourse forum for anything related to Jekyll!
