@@ -39,6 +39,9 @@ a {
 
 #ftw-site-menu {
   border-top: 5px solid $ftw-color-highlight;
+  
+  /*  Purely to prevent flicker: http://stackoverflow.com/a/20907500 */
+  -webkit-transform: translate3d(0,0,0);
 }
 
 #ftw-site-footer {
