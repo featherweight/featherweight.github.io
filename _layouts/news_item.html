@@ -2,24 +2,26 @@
 layout: news
 ---
 
-<article>
+<article class="ui segment">
   <h2>
     {{ page.title }}
-    <a href="{{ page.url }}" class="permalink" title="Permalink">∞</a>
+    <a href="{{ page.url }}" class="permalink" title="Permalink"><i class="fa fa-link"></i></a>
   </h2>
-  <span class="post-category">
-    <span class="label">
-      {{ page.categories | array_to_sentence_string }}
-    </span>
-  </span>
-  <div class="post-meta">
-    <span class="post-date">
-      {{ page.date | date_to_string }}
-    </span>
-    <a href="https://github.com/{{ page.author }}" class="post-author">
-      <img src="https://github.com/{{ page.author }}.png" class="avatar" alt="{{ page.author }} avatar" width="24" height="24">
-      {{ page.author }}
-    </a>
+  {% for category in page.categories %}
+    <div class="ui green tag label">{{ category }}</div>
+  {% endfor %}
+  <div class="ui comments">
+    <div class="ui comment">
+      <a class="avatar">
+        <img src="https://github.com/{{ page.author }}.png">
+      </a>
+      <div class="content">
+        <a class="author">{{ page.author }}</a>
+        <div class="metadata">
+          <span class="date">{{ page.date | date_to_string }}</span>
+        </div>
+      </div>
+    </div>
   </div>
   <div class="post-content">
     {{ content }}
