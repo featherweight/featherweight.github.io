@@ -1,4 +1,5 @@
-{% if include.type == 'protip' %}
+{% case include.type %}
+{% when 'protip' %}
   <div class="ui icon positive message">
     <i class="icon diamond"></i>
     <div class="content">
@@ -6,7 +7,7 @@
       <p>{{include.body}}</p>
     </div>
   </div>
-{% elsif include.type == 'info' %}
+{% when 'info' %}
   <div class="ui icon info message">
     <i class="icon info circle"></i>
     <div class="content">
@@ -14,7 +15,7 @@
       <p>{{include.body}}</p>
     </div>
   </div>
-{% elsif include.type == 'contribute' %}
+{% when 'contribute' %}
   <div class="ui icon positive message">
     <i class="icon fork"></i>
     <div class="content">
@@ -22,7 +23,7 @@
       <p>{{include.body}}</p>
     </div>
   </div>
-{% elsif include.type == 'warning' %}
+{% when 'warning' %}
   <div class="ui icon warning message">
     <i class="icon announcement"></i>
     <div class="content">
@@ -30,7 +31,7 @@
       <p>{{include.body}}</p>
     </div>
   </div>
-{% elsif include.type == 'security' %}
+{% when 'security' %}
   <div class="ui icon negative message">
     <i class="icon warning sign"></i>
     <div class="content">
@@ -38,4 +39,5 @@
       <p>{{include.body}}</p>
     </div>
   </div>
-{% endif %}
+{% else %}
+{% endcase %}
