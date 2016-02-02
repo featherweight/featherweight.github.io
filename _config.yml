@@ -13,8 +13,6 @@ collections:
     output: true
 
 gems:
-- jekyll-mentions
-- jekyll-redirect-from
 - jekyll-sitemap
 
 exclude:
