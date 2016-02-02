@@ -1,5 +1,5 @@
 ---
-permalink: /docs/ftw-actor-message/
+permalink: /docs/actor-message/
 layout:    docs
 title:     Actor Message
 menu:      Actor Message

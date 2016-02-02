@@ -1,5 +1,5 @@
 ---
-permalink: /docs/ftw-regex/
+permalink: /docs/regex/
 layout:    docs
 title:     Regular Expressions
 menu:      Regex

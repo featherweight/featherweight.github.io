@@ -1,5 +1,5 @@
 ---
-permalink: /docs/ftw-reflection/
+permalink: /docs/reflection/
 layout:    docs
 title:     Reflection
 menu:      Reflection

@@ -13,42 +13,42 @@
   - /concepts/messaging/
   - /concepts/sockets/
   - /concepts/kernel/
-  - /concepts/ftw-codegen/
+  - /concepts/codegen/
   - /concepts/deployment/
 
 - title: FTW Actor Libraries
   items:
-  - /docs/ftw-actor-instance/
-  - /docs/ftw-actor-inbox/
-  - /docs/ftw-actor-connector/
-  - /docs/ftw-actor-supervisor/
-  - /docs/ftw-actor-message/
-  - /docs/ftw-actor-scheduler/
-  - /docs/ftw-actor-job/
-  - /docs/ftw-actor-socket-publisher-subscriber/
-  - /docs/ftw-actor-socket-producer-consumer/
+  - /docs/actor-instance/
+  - /docs/actor-inbox/
+  - /docs/actor-connector/
+  - /docs/actor-supervisor/
+  - /docs/actor-message/
+  - /docs/actor-job-scheduler/
+  - /docs/actor-job/
+  - /docs/actor-socket-publisher-subscriber/
+  - /docs/actor-socket-producer-consumer/
 
 - title: FTW Core Libraries
   items:
-  - /docs/ftw-database-sqlite/
-  - /docs/ftw-dataflow/
-  - /docs/ftw-expressions/
-  - /docs/ftw-error/
-  - /docs/ftw-file-system/
-  - /docs/ftw-json/
-  - /docs/ftw-http-client/
-  - /docs/ftw-http-server/
-  - /docs/ftw-numeric/
-  - /docs/ftw-reflection/
-  - /docs/ftw-regex/
-  - /docs/ftw-string/
-  - /docs/ftw-system/
-  - /docs/ftw-time/
-  - /docs/ftw-dotnet/
+  - /docs/database-sqlite/
+  - /docs/dataflow/
+  - /docs/expressions/
+  - /docs/error/
+  - /docs/file-system/
+  - /docs/json/
+  - /docs/http-client/
+  - /docs/http-server/
+  - /docs/numeric/
+  - /docs/reflection/
+  - /docs/regex/
+  - /docs/string/
+  - /docs/system/
+  - /docs/time/
+  - /docs/dotnet/
 
 - title: FTW Cookbook
   items:
-  - /concepts/ftw-utilities/
+  - /concepts/utilities/
   - /concepts/application-structure/
   - /concepts/actor-or-object/
   - /concepts/debugging-actors/

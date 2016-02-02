@@ -1,5 +1,5 @@
 ---
-permalink: /docs/ftw-database-sqlite/
+permalink: /docs/database-sqlite/
 layout:    docs
 title:     SQLite Database
 menu:      SQLite Database

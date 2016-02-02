@@ -1,5 +1,5 @@
 ---
-permalink: /docs/ftw-http-client/
+permalink: /docs/http-client/
 layout:    docs
 title:     HTTP Client
 menu:      HTTP Client

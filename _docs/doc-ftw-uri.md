@@ -1,5 +1,5 @@
 ---
-permalink: /docs/ftw-uri/
+permalink: /docs/uri/
 layout:    docs
 title:     URI
 menu:      URI

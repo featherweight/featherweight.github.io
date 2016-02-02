@@ -1,5 +1,5 @@
 ---
-permalink: /docs/ftw-dataflow/
+permalink: /docs/dataflow/
 layout:    docs
 title:     Dataflow
 menu:      Dataflow

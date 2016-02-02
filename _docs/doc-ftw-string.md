@@ -1,5 +1,5 @@
 ---
-permalink: /docs/ftw-string/
+permalink: /docs/string/
 layout:    docs
 title:     String
 menu:      String

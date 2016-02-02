@@ -1,5 +1,5 @@
 ---
-permalink: /docs/ftw-time/
+permalink: /docs/time/
 layout:    docs
 title:     Time
 menu:      Time

@@ -1,5 +1,5 @@
 ---
-permalink: /concepts/ftw-utilities/
+permalink: /concepts/utilities/
 layout:    docs
 title:     FTW Utilities
 menu:      FTW Utilities

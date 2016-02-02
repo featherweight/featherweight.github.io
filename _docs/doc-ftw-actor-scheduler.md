@@ -1,5 +1,5 @@
 ---
-permalink: /docs/ftw-actor-scheduler/
+permalink: /docs/actor-job-scheduler/
 layout:    docs
 title:     Actor Instance Job Scheduler
 menu:      Actor Scheduler

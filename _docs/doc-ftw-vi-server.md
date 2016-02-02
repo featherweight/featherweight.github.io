@@ -1,5 +1,5 @@
 ---
-permalink: /docs/ftw-vi-server/
+permalink: /docs/vi-server/
 layout:    docs
 title:     VI Server
 menu :     VI Server

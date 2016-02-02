@@ -1,5 +1,5 @@
 ---
-permalink: /docs/ftw-actor-socket-producer-consumer/
+permalink: /docs/actor-socket-producer-consumer/
 layout:    docs
 title:     Producer+Consumer Sockets
 menu:      Producer+Consumer

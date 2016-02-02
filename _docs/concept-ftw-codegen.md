@@ -1,5 +1,5 @@
 ---
-permalink: /concepts/ftw-codegen/
+permalink: /concepts/codegen/
 layout:    docs
 title:     Code Generation
 menu:      Code Generation

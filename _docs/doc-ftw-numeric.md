@@ -1,5 +1,5 @@
 ---
-permalink: /docs/ftw-numeric/
+permalink: /docs/numeric/
 layout:    docs
 title:     Numeric
 menu:      Numeric

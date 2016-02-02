@@ -1,5 +1,5 @@
 ---
-permalink: /docs/ftw-actor-job/
+permalink: /docs/actor-job/
 layout:    docs
 title:     Actor Job
 menu:      Actor Job

@@ -1,5 +1,5 @@
 ---
-permalink: /docs/ftw-application/
+permalink: /docs/application/
 layout:    docs
 title:     Application
 menu:      Application

@@ -1,5 +1,5 @@
 ---
-permalink: /docs/ftw-email/
+permalink: /docs/email/
 layout:    docs
 title:     Email
 menu:      Email

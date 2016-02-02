@@ -1,5 +1,5 @@
 ---
-permalink: /docs/ftw-user-interface/
+permalink: /docs/user-interface/
 layout:    docs
 title:     User Interface
 menu:      User Interface

@@ -1,5 +1,5 @@
 ---
-permalink: /docs/ftw-file-system/
+permalink: /docs/file-system/
 layout:    docs
 title:     File System
 menu:      File System

@@ -1,5 +1,5 @@
 ---
-permalink: /docs/ftw-http-server/
+permalink: /docs/http-server/
 layout:    docs
 title:     HTTP Server
 menu:      HTTP Server

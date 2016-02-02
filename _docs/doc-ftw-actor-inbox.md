@@ -1,5 +1,5 @@
 ---
-permalink: /docs/ftw-actor-inbox/
+permalink: /docs/actor-inbox/
 layout:    docs
 title:     Actor Inbox
 menu:      Actor Inbox

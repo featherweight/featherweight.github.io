@@ -1,5 +1,5 @@
 ---
-permalink: /docs/ftw-actor-connector/
+permalink: /docs/actor-connector/
 layout:    docs
 title:     Actor Connector
 menu:      Actor Connector

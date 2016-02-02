@@ -1,5 +1,5 @@
 ---
-permalink: /docs/ftw-actor-instance/
+permalink: /docs/actor-instance/
 layout:    docs
 title:     Actor Instance
 menu:      Actor Instance

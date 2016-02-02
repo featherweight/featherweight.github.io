@@ -1,5 +1,5 @@
 ---
-permalink: /docs/ftw-json/
+permalink: /docs/json/
 layout:    docs
 title:     JSON
 menu:      JSON

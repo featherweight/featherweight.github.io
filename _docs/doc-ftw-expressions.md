@@ -1,5 +1,5 @@
 ---
-permalink: /docs/ftw-expressions/
+permalink: /docs/expressions/
 layout:    docs
 title:     Expressions
 menu:      Expressions

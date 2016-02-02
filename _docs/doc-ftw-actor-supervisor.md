@@ -1,5 +1,5 @@
 ---
-permalink: /docs/ftw-actor-supervisor/
+permalink: /docs/actor-supervisor/
 layout:    docs
 title:     Actor Supervisor
 menu:      Actor Supervisor

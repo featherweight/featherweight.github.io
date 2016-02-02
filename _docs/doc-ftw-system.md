@@ -1,5 +1,5 @@
 ---
-permalink: /docs/ftw-system/
+permalink: /docs/system/
 layout:    docs
 title:     System
 menu:      System

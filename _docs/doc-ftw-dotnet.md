@@ -1,5 +1,5 @@
 ---
-permalink: /docs/ftw-dotnet/
+permalink: /docs/dotnet/
 layout:    docs
 title:     FTW.NET
 menu:      FTW.NET
