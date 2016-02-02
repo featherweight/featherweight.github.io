@@ -17,3 +17,5 @@ gems:
 
 exclude:
  - "*.esproj"
+ - README.md
+ 
