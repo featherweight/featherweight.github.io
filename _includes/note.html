@@ -6,8 +6,7 @@
       <p>{{include.body}}</p>
     </div>
   </div>
-{% endif %}
-{% if include.type == 'info' %}
+{% elsif include.type == 'info' %}
   <div class="ui icon info message">
     <i class="icon info circle"></i>
     <div class="content">
@@ -15,8 +14,7 @@
       <p>{{include.body}}</p>
     </div>
   </div>
-{% endif %}
-{% if include.type == 'contribute' %}
+{% elsif include.type == 'contribute' %}
   <div class="ui icon positive message">
     <i class="icon fork"></i>
     <div class="content">
@@ -24,8 +22,7 @@
       <p>{{include.body}}</p>
     </div>
   </div>
-{% endif %}
-{% if include.type == 'warning' %}
+{% elsif include.type == 'warning' %}
   <div class="ui icon warning message">
     <i class="icon announcement"></i>
     <div class="content">
@@ -33,8 +30,7 @@
       <p>{{include.body}}</p>
     </div>
   </div>
-{% endif %}
-{% if include.type == 'security' %}
+{% elsif include.type == 'security' %}
   <div class="ui icon negative message">
     <i class="icon warning sign"></i>
     <div class="content">
