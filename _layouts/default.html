@@ -5,11 +5,11 @@
   <title>{{ page.title }}</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="generator" content="Featherweight v{{ _site.version }}">
-  
+
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic,900">
   <link rel="stylesheet" href="/semantic-ui/semantic.min.css">
   <link rel="stylesheet" href="/css/screen.css">
-  
+
   <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
   <link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png">
@@ -47,7 +47,7 @@
     {{ content }}
   </section>
   <div class="ui hidden section divider"></div>
-  
+
   <footer id="ftw-site-footer" class="ui inverted vertical segment">
     <div class="ui grid container">
       <div class="center aligned column">
@@ -66,28 +66,28 @@
       anchor.title = "Permalink";
       return anchor;
     };
-  
+
     var linkifyAnchors = function (level, containingElement) {
       var headers = containingElement.getElementsByTagName("h" + level);
       for (var h = 0; h < headers.length; h++) {
         var header = headers[h];
-  
+
         if (typeof header.id !== "undefined" && header.id !== "") {
           header.appendChild(anchorForId(header.id));
         }
       }
     };
-  
+
     document.onreadystatechange = function () {
       if (this.readyState === "complete") {
-      
+
         /*  Account for fixed-position header. A reasonable fixed height is already established,
             but this ensures that height is enough to acommodate the entire menu. */
         var contentPlacement = $('#ftw-site-menu').position().top + $('#ftw-site-menu').outerHeight();
         $('#ftw-site-content-top-spacer').css('min-height',contentPlacement);
 
         $('.popup').popup();
-        
+
         var ftw_cta_array = [
           '<a class="ui green labeled icon button" href="/consultants/"><i class="send icon"></i>Get Help</a>',
           '<a class="ui green labeled icon button" href="/consultants/"><i class="send icon"></i>Hire a Consultant</a>',
@@ -98,7 +98,7 @@
         var ftw_cta_index = Math.floor(Math.random()*ftw_cta_array.length);
         $('#ftw-hire-button a').replaceWith(ftw_cta_array[ftw_cta_index]);
         $('#ftw-hire-button').transition('scale in');
-      
+
         var contentBlock = document.getElementsByClassName("linkify-headers")[0];
         if (!contentBlock) {
           return;
@@ -107,7 +107,7 @@
           linkifyAnchors(level, contentBlock);
         }
       }
-      
+
     };
   </script>
 </body>

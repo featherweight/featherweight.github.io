@@ -27,7 +27,7 @@ that is better that no code, given the same observable result.
 
 Given two implementations of an application, where the
 end-users of the application are unable to perceive or
-detect differences in features, performance, 
+detect differences in features, performance,
 
 Software deliverables effectively have two sides. The outside
 and the inside.
@@ -80,7 +80,7 @@ meta, attempting to optimize for either its end-users or its
 developers (where, a FTW developer is also an end-user).
 
 Additionally, FTW is used to make software that likewise has an
-inside and an outside. Choosing to use FTW in an application 
+inside and an outside. Choosing to use FTW in an application
 
 This is a gross simplification of the many facets and nuanced
 interactions between developers and end-users; yet, as developers

@@ -31,7 +31,7 @@ the `FTW Job: Handle Error` job.
 
 When using  and creating
 multiple Job Handlers (i.e., more cases in the case structure), the application domain
-sometimes requires that multiple 
+sometimes requires that multiple
 
 ## How do I "Clear All Jobs" or "Empty Schedule"?
 
@@ -46,7 +46,7 @@ the shutdown sequence of the actor.
 
 ## Job Prioritization
 
-A `FTW Scheduler` implements three `Job Queues` 
+A `FTW Scheduler` implements three `Job Queues`
 
 ## Scheduling Strategies
 
@@ -59,4 +59,4 @@ a first-in first-out (FIFO) queue
 
 
 
-## 
+##

@@ -49,4 +49,4 @@ future trajectory of that protocol.
 
 ### Too hip?
 
-If a particular library is only used by the cool cats, but no 
+If a particular library is only used by the cool cats, but no

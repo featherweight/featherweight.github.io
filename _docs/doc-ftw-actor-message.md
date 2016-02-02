@@ -18,7 +18,7 @@ at t
 A Message conveys information by:
 
 * its arrival
-* implicitly, its failure to arrive within a certain time 
+* implicitly, its failure to arrive within a certain time
 * payload of bytes (optional, but typical)
 
 If a message arrives at its destination, the transport has guaranteed
@@ -34,7 +34,7 @@ value.
 
 This is for a few reasons:
 
-* the scope, context, and environment of the remote actor 
+* the scope, context, and environment of the remote actor
 
 * assuming the reference could be dereference, to avoid resource contentions, such as:
 ** inter-actor mutexing

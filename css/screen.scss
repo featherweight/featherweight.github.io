@@ -32,7 +32,7 @@ a {
   color: $ftw-color-highlight;
   text-decoration: none;
   @include transition(all .25s);
-  
+
   &:hover {
     color: $ftw-color-highlight-hover;
   }
@@ -40,7 +40,7 @@ a {
 
 #ftw-site-menu {
   border-top: 5px solid $ftw-color-highlight;
-  
+
   /*  Purely to prevent flicker: http://stackoverflow.com/a/20907500 */
   -webkit-transform: translate3d(0,0,0);
 }
@@ -94,15 +94,15 @@ h6:hover .permalink {
 /* Article - Used for both docs and news */
 
 article {
-  
+
   h1, h2, h3 {
-  
+
     color: $ftw-color-highlight-alt;
-    
+
     a {
       color: $ftw-color-highlight-alt;
     }
-    
+
     a:hover {
       color: $ftw-color-highlight-alt-hover;
     }
@@ -182,20 +182,20 @@ h5 > code,
 /* Contact Form */
 
 div.contact_form form {
-  
+
   /*background-color: #DDD;*/
 
   .name {
-  
+
   }
   .email {
-  
+
   }
   .message {
-  
+
   }
   .submit {
-  
+
   }
-  
+
 }

@@ -25,14 +25,14 @@ data carried along with the message
 
 ####transactional data
 related to message payload, this is the set
-of data associated 
+of data associated
 
 ####statelessness
 notion that other nodes in a network do not retain
 memory or awareness of previous messages sent.
 
 ####socket
-a conceptual hub into which messages 
+a conceptual hub into which messages
 
 ####node
 a physical (or virtual) entity that exists within a context
@@ -96,7 +96,7 @@ within
 
 ####URI
 Uniform Resource Identifier. A codified manner in which to
-represent an address as per RFC xxxx. 
+represent an address as per RFC xxxx.
 
 ####connection
 the presence of a channel between one or more nodes
@@ -160,11 +160,11 @@ asdf
 ####command
 a command is a type of message that does not exist in
 actor-oriented design! "Command" connotes the ability to control, and
-an actor never is able to explicitly control 
+an actor never is able to explicitly control
 
 ####request
 a message sent to an endpoint in expectation of a response.
-A request/response pair 
+A request/response pair
 
 ####ask
 a special send/recv semantic where a request is sent to a peer
@@ -203,7 +203,7 @@ virtual infrastructure used to actually perform the delivery of a
 message from one endpoint to another. A message transport thus may have
 many components, including send/recv buffers, intermediate brokers, transport
 headers on a wire-level protocol, and so forth.
-protocol, 
+protocol,
 
 ####fan out
 ability of a socket to send messages to more than one connected
@@ -275,7 +275,7 @@ asdf
 ####topic
 conceptual ability of a publisher socket to produce independent
 channels to which subscriber sockets can conditionally subscribe. This is
-an additional 
+an additional
 
 ## Priority and Urgency
 

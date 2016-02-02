@@ -23,7 +23,7 @@ dexterity, agility and speed.
 * is  based on this principle;
 * has no external dependencies;
 * has reference designs for distributed systems;
-* 
+*
 * forms an application microframework.
 
 ## Feature Highlights
@@ -40,7 +40,7 @@ actor-oriented development. To list a few:
 * C#/.NET - [Orleans](http://dotnet.github.io/orleans/) and [Akka.NET](http://getakka.net/)
 * LabVIEW - [NI Actor Framework](https://decibel.ni.com/content/groups/actor-framework-2011)
 
-To 
+To
 
 <a href="/actors/">Learn more about FTW Actors &rarr;</a>
 
@@ -64,7 +64,7 @@ have to endure expensive refactors.
 [SQLite](https://www.sqlite.org/about.html) is an incredibly
 powerful embedded database engine. Featherweight wraps its
 abilities with an idiomatic binding to the LabVIEW Block Diagram,
-meaning 
+meaning
 
 <a href="/concepts/sqlite-tips/">Learn more about SQLite &rarr;</a>
 
@@ -101,7 +101,7 @@ and wrapping them in native, idiomatic APIs for LabVIEW.
 
 Applications built with Featherweight continue to grow in
 capability and value, since Featherweight continues to upgrade
-and update based on the best libraries available. 
+and update based on the best libraries available.
 
 ## What skill level do I need to use Featherweight?
 
@@ -127,7 +127,7 @@ of FTW topics:
 
 To fully grasp the `FTW Socket` libraries, it helps to understand
 LabVIEW Notifiers, Queues, User Events, and Network Streams. Some questions
-that are 
+that are
 
 Where are each of these topologies used? What are some problems
 you might encounter if the incorrect topology what chosen? In what ways is
@@ -153,7 +153,7 @@ to build distributed applications and systems.
 There exist differences between statically-typed languages and dynamically-typed
 languages.
 
-Featherweight does not believe or adhere to a 'language' being dynamically- 
+Featherweight does not believe or adhere to a 'language' being dynamically-
 or statically-typed, but instead acknowledges that 'application domains' might
 likely yield nicer solutions in one or the other type system.
 
@@ -242,7 +242,7 @@ documentation" could have come at the expense of simplifying the library to wher
 intuition
 
 There exist balances in software development, where torquing the knob to 0 or 10
-is 
+is
 
 * Code, features, tests, documentation are valuable assets, but they also represent
 liabilities.
@@ -277,14 +277,14 @@ OpenG, MGI Toolkits, and GPower represent the most successful curated collection
 of libraries in the LabVIEW community, and are widely acknowledged
 for their long-proven usefulness, quality, availability, and support.
 
-vi.lib, the shipping standard library for the LabVIEW Language, is 
+vi.lib, the shipping standard library for the LabVIEW Language, is
 
 FTW does not replace or compete with these collections of libraries. Rather,
 many FTW users continue to use both in the same application.
 
 FTW intentionally does not link to these libraries or any others for a few reasons:
 * to avoid dependency collisions for end-users of all products
-* to avoid unintentional dependencies beyond 
+* to avoid unintentional dependencies beyond
 
 Instead, for a few functions where it would have been tempting to save
 time as a FTW library developer and use existing functions, FTW has similar
@@ -293,11 +293,11 @@ methods, oftentimes tuned specifically for ftw-esque development.
 ## Differences
 
 The LabVIEW community sometimes emphasizes a few ideals that ftw-esque
-developers might 
+developers might
 
 * Keyboards lead to typos which lead to bugs. Mice lead to wiring which leads
 to nirvana. Featherweight sometimes prefers typing to writing, where the
-semantic-to-syntax ratio dictates. 
+semantic-to-syntax ratio dictates.
 * Static types are bugs that don't happen; dynamic types are run-time
   errors waiting to happen. Perhaps, but one tradeoff is losing design patterns
   where nodes and functions remain agnostic to the entirety of data upon which

@@ -26,7 +26,7 @@ The `FTW Actor Context` additionally has:
 
 ** Note: it is undecided whether Featherweight will enable spawning
 of Actors into remote LabVIEW Application References, since this connotes
-pre-knowledge 
+pre-knowledge
 
 ** Note: it is undecided whether Featherweight Actors will continue to have individual inbox addresses, or whether they will be addressed relative to their Context. Right now, I'm 80%+ in favor of relative addressing, meaning there would only need to exist one socket for external communication (internally, actors could address each other directly based on an inproc socket as context
 
@@ -35,7 +35,7 @@ pre-knowledge
 
 The `FTW Actor Context` acts as a walled garden of an arbitrary
 grouping of `FTW Actor Instances` within an application. An application
-may have one or 
+may have one or
 
 The Actor Logger logs events and exceptions within
 an [Actor Context](/docs/ftw-actor-context/).
@@ -75,4 +75,4 @@ on number of records.
 
 ## Histogram
 
-Each log entry 
+Each log entry

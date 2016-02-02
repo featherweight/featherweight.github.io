@@ -12,7 +12,7 @@ editors:
 If you're new to Featherweight, it's recommended to first skim
 through the documentation (especially the synopses of each namespace).
 
-Next, it's worthwhile to begin 
+Next, it's worthwhile to begin
 
 
 {% include note.html type="warning" title="Easy there" body="Perhaps avoid trying to refactor your 20k VI distributed system as your first project learning Featherweight!" %}

@@ -46,18 +46,18 @@ be run as part of the `make check` process
 The test runner may be statically compiled into your
 application in order to perform tests at run-time.
 
-Additionally, 
+Additionally,
 
 { include note.html type="warning" text="Featherweight Test is not intended to be a full-featured test runner." }
 
 ## Interpreting the Test Report
 
-Featherweight Test generates a 
+Featherweight Test generates a
 
 ## Writing Decent Tests
 
 Just like your codebase, tests are both an asset and a
-liability. 
+liability.
 
 Not enough testing can hurt you. Too much testing can hurt you.
 

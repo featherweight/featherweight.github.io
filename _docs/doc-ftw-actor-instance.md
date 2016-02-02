@@ -14,7 +14,7 @@ abilities of an Actor, and does "actual work" to manipulate the real
 or virtual world. Side effects created by an Actor Instance that could
 be observed by another Actor Instance, such
 as manipulating a physical instrument, or modifying a database table,
-are usually always the sole "owners" of such 
+are usually always the sole "owners" of such
 
 Sometimes "Actor Instance" is simply shortened as "Actor".
 
@@ -26,7 +26,7 @@ To launch multiple instances of an actor
 
 { include note.html type="notice" title="Note" text="When launching multiple instances of an Actor, ensure the Actor Process is reentrant. Very likely, instance methods should be reentrant as well, and very likely to avoid " }
 
-An Actor Instance communicates with other Actor Instances 
+An Actor Instance communicates with other Actor Instances
 (or generally, other nodes capable of communicated with Actor
 Instances) purely via messaging. Said another way, an Actor
 never has static or dynamic dispatch callsites on another Actor's
@@ -39,7 +39,7 @@ may be statically dispatched or dynamically dispatched.
 
 ### Static Launching of a Single Actor
 
-The simplest way to launch an Actor is  Actor Process will 
+The simplest way to launch an Actor is  Actor Process will
 
 [screenshot of three actor instances]
 
@@ -150,7 +150,7 @@ messages in succession, it should not assume that the remote endpoint
 is neither in an assumed state for subsequent messages nor even receiving
 the messages in the same order as being sent.
 
-For those of us who 
+For those of us who
 
 ## Cost of Failure vs Reasonable Expections
 
@@ -257,7 +257,7 @@ returns a structure of both measurements.
 #### Do the two physical channels have an implicit shared resource - time?
 
 If the measurements must be timed with respect to the other, this timing
-requirement acts as an oft-overlooked 
+requirement acts as an oft-overlooked
 
 ## Public vs. Private vs. Published Interface
 
@@ -272,7 +272,7 @@ The traditional OO API has:
   non-descendents that attempt to use will throw a compiler error about scope
 * private methods/properties/fields: only methods of the class itself can
   link to or dispatch these; even descendent classes will throw an error
-  
+
 An Actor, on the other hand, has:
 
 * No "public" methods/properties/fields
@@ -280,7 +280,7 @@ An Actor, on the other hand, has:
   or children of the actor instance
 * Published requests ("methods"): the list of "methods", roughly analogous
   to remote procedure calls (RPC), that the actor will respond to. The "published"
-  interface 
+  interface
 
 ### Published Interface
 

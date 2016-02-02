@@ -98,7 +98,7 @@ messages in succession, it should not assume that the remote endpoint
 is neither in an assumed state for subsequent messages nor even receiving
 the messages in the same order as being sent.
 
-For those of us who 
+For those of us who
 
 ## Cost of Failure vs Reasonable Expections
 
@@ -205,7 +205,7 @@ returns a structure of both measurements.
 #### Do the two physical channels have an implicit shared resource - time?
 
 If the measurements must be timed with respect to the other, this timing
-requirement acts as an oft-overlooked 
+requirement acts as an oft-overlooked
 
 ## Public vs. Private vs. Published Interface
 
@@ -220,7 +220,7 @@ The traditional OO API has:
   non-descendents that attempt to use will throw a compiler error about scope
 * private methods/properties/fields: only methods of the class itself can
   link to or dispatch these; even descendent classes will throw an error
-  
+
 An Actor, on the other hand, has:
 
 * No "public" methods/properties/fields
@@ -228,7 +228,7 @@ An Actor, on the other hand, has:
   or children of the actor instance
 * Published requests ("methods"): the list of "methods", roughly analogous
   to remote procedure calls (RPC), that the actor will respond to. The "published"
-  interface 
+  interface
 
 ### Published Interface
 

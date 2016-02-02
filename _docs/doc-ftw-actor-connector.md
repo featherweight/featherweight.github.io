@@ -10,7 +10,7 @@ editors:
 ---
 
 Considering the `Actor Instance` as a node within an `Actor Context`,
-one might consider how such nodes (and other nodes in the network 
+one might consider how such nodes (and other nodes in the network
 capable of communicating with Actors) interact with one another.
 
 The role of the `FTW Actor Connector` is to conceptually act as a
@@ -38,7 +38,7 @@ the value.
 * incidentally, the different nodes may not even be within the same
   type system, or even language, or endianness, or byte-packing boundaries,
   or even quantization of "bits"!
-  
+
 For this reason, the Actor Connector provides a degree of indirection
 from the Actor Instance, allowing an Actor Instance written in LabVIEW
 to be invokable natively from any arbitrary node capable of sending
@@ -66,14 +66,14 @@ The Connector defines tasks such as:
 
 Many names were considered for this concept of "Actor Connector", including:
 
-* Actor API, since from the outside looking in, 
+* Actor API, since from the outside looking in,
 * ActorRef or ActorReference (this is what Akka uses)
 * Actor Binding
 * Actor Client
 * Actor Alias
 * Actor ...
 
-As of writing, "Actor Connector" was chosen, 
+As of writing, "Actor Connector" was chosen,
 
 Nominally, the class is called an "Actor Connector", and once instantiated
 as an object is an "Actor Connection" (even if not yet connected).
@@ -98,7 +98,7 @@ It is not explicitly necessary to create a new Actor Connector
 for each Actor Instance type in an application. If the Actor Instance
 only exposes a small set of messages, and especially if the messages
 have a simple or no payload, the base class FTW-Actor-Connector may be
-used 
+used
 
 ## Ask XNode
 

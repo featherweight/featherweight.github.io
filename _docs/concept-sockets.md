@@ -15,7 +15,7 @@ today for LabVIEW.
 
 ## FTW Sockets
 
-The APIs used for messaging in Featherweight are called `FTW Sockets`. 
+The APIs used for messaging in Featherweight are called `FTW Sockets`.
 
 FTW Actors own individual sockets used to send messages to one another.
 
@@ -25,7 +25,7 @@ that appear to be actors) in other languages and execution systems.
 
 ### Message Transport Schemes
 
-Each FTW Socket topology offers four types of 
+Each FTW Socket topology offers four types of
 
 <div class="mobile-side-scroller">
 <table>
@@ -39,15 +39,15 @@ Each FTW Socket topology offers four types of
     <tr>
       <td><p><code>tcp://</code></p></td>
       <td><p>
-      
-        Actors 
-      
+
+        Actors
+
       </p></td>
     </tr>
     <tr>
       <td><p><code>ws://</code></p></td>
       <td><p>
-      
+
         Ruleset that governs how the actor reacts to Ask and Tell requests from remote actors. Each inbox in the array includes address where it listens for requests, its priority with respect to other inboxes, and message handling semantics for different message types.
       </p></td>
     </tr>

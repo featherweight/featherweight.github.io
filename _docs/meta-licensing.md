@@ -14,7 +14,7 @@ editors:
 This section is not legal advice (legal advice comes from your counsel).
 
 This section is intended to help you as you consider using Featherweight: Application Framework for LabVIEW™ code,
-or referencing the documentation in 
+or referencing the documentation in
 
 ### Using the Framework
 
@@ -32,7 +32,7 @@ include with your distributable the original license: [#featherweight-framework-
 
 Ask your counsel if you are unsure or have additional questions.
 
-### Referencing the Documentation 
+### Referencing the Documentation
 
 The online documentation and ideas expressed on this site have a
 different license than the codebase: [#ftw-docs-license]

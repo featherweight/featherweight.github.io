@@ -9,11 +9,11 @@ menu:      Consultants
 
   <p>Featherweight is built with good will and generosity, yet its development remains primarily a business pursuit. Consider hiring these world-class systems architects build your business and products.</p>
   <p>We know Featherweight inside and out, and we can work with you and your team to create systems beyond what even seems possible.</p>
-  
+
   <div class="ui horizontal section divider">
     <span>Loaded in random order</span>
   </div>
-  
+
   <div id="consultant_grid" class="ui three cards">
         <div class="ui card transition hidden">
           <div class="blurring dimmable image">
@@ -40,8 +40,8 @@ menu:      Consultants
             <a><i class="users icon"></i>2 Members</a>
           </div>
         </div>
-        
-        
+
+
         <div class="ui card transition">
           <div class="blurring dimmable image hidden">
             <div class="ui dimmer">
@@ -67,7 +67,7 @@ menu:      Consultants
             <a><i class="users icon"></i>Another Company LLC</a>
           </div>
         </div>
-        
+
         <div class="ui card transition">
           <div class="blurring dimmable image hidden">
             <div class="ui dimmer">
@@ -93,7 +93,7 @@ menu:      Consultants
             <a><i class="users icon"></i>tinybiz</a>
           </div>
         </div>
-        
+
         <div class="ui card transition">
           <div class="blurring dimmable image hidden">
             <div class="ui dimmer">
@@ -124,9 +124,9 @@ menu:      Consultants
   <div class="ui center aligned vertical segment">
     <button id="button_randomize" class="ui compact small button" href="/consultants/"><i class="refresh icon"></i>Shuffle</button>
   </div>
-  
+
   <div class="ui hidden section divider"></div>
-  
+
   <div class="ui segment">
     <form action="https://docs.google.com/forms/d/1i_m5rp6xwGww6Vn7IE4wCv4BIiH3gzi9MA9LLU4KH0E/formResponse" method="POST" class="ui form" target="ftw-result">
       <div class="two fields">
@@ -146,7 +146,7 @@ menu:      Consultants
       <input type="submit" value="Send" class="ui submit button">
     </form>
   </div>
-  
+
   <div class="ui hidden section divider"></div>
 
 </div>
@@ -155,11 +155,11 @@ menu:      Consultants
   var consultant_grid = document.getElementById("consultant_grid");
   var cards = consultant_grid.children;
   var frag = document.createDocumentFragment();
-  
+
   function randomize_grid() {
     var element;
     var i = 0;
-    
+
     while (cards.length) {
       element = cards[Math.floor(Math.random() * cards.length)];
       element.classList.add("hidden");
@@ -168,13 +168,13 @@ menu:      Consultants
       i++;
     }
     consultant_grid.appendChild(frag);
-    
+
     $('#consultant_grid .card').transition({
         animation : 'scale',
         interval  : 200
       });
   }
-  
+
   document.addEventListener('DOMContentLoaded', function() {
     document.getElementById("button_randomize").addEventListener('click', randomize_grid);
     randomize_grid();

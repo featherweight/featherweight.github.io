@@ -81,7 +81,7 @@ The NI Actor Framework (NI-AF) is the most important reference design to
 exist in the LabVIEW community since the JKI State Machine.
 
 NI-AF represents the first widely-acknowledged need to work together
-on an Application Framework for LabVIEW because 2) there 
+on an Application Framework for LabVIEW because 2) there
 
 ## FTW Actors vs. QMH
 
@@ -111,9 +111,9 @@ a larger chunk of work, because the overhead of each atomic piece
 of work is the same and considered expensive when performed in small
 pieces.
 
-Most QMH reference designs do not 
+Most QMH reference designs do not
 
-## FTW Actors vs. 
+## FTW Actors vs.
 
 ## Incoming Message Queue vs. Job Queue
 

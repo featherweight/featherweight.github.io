@@ -33,5 +33,3 @@ Though, prior to doing so, consider having substantial evidence of
 public contributions as a basis.
 
 ## Business Marketing Guidelines
-
-
