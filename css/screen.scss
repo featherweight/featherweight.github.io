@@ -17,6 +17,7 @@ $ftw-color-highlight-alt-hover: lighten($ftw-color-highlight-alt, 20%);
 
 $ftw-subtle-text-on-darkbg-color: #888;
 $ftw-normal-text-on-darkbg-color: #DDD;
+$ftw-subtle-text-on-lightbg-color: #777;
 $ftw-normal-text-on-lightbg-color: #333;
 $ftw-normal-text-on-highlight-color: #EEE;
 
@@ -113,18 +114,20 @@ article {
 /* Documentation */
 
 .doc-authors {
-  color: $ftw-subtle-text-on-darkbg-color;
+  color: $ftw-subtle-text-on-lightbg-color;
   font-size: 0.6em;
-  margin-top: 40px;
-  
+  padding-right: 1em;
+  display: inline-block;
   .meta {
     display: inline;
   }
+  .doc-author {
+    display: inline;
+    margin-left: 0.5em;
+  }
 }
 
-.doc-author {
-  display: inline;
-}
+
 
 /* Code Highlighting */
 

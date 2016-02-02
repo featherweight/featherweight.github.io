@@ -5,7 +5,6 @@ title:     FTW Actor Model
 menu:      FTW Actor Model
 authors:
   - Jack R. Dunaway
-  - "@wirebirdlabs"
 editors:
   - Eric Metzler
 ---
