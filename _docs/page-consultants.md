@@ -128,36 +128,28 @@ menu:      Consultants
   <div class="ui hidden section divider"></div>
   
   <div class="ui segment">
-    <form action="//formspree.io/inquiries@featherweight.io" method="POST" class="ui form">
+    <form action="https://docs.google.com/forms/d/1i_m5rp6xwGww6Vn7IE4wCv4BIiH3gzi9MA9LLU4KH0E/formResponse" method="POST" class="ui form" target="ftw-result">
       <div class="two fields">
         <div class="field">
           <label>Name</label>
-          <input type="text" name="Name" placeholder="Your name">
+          <input type="text" name="entry.847528909" placeholder="Your name">
         </div>
         <div class="field">
           <label>Email</label>
-          <input type="email" name="_replyto" placeholder="Email address">
+          <input type="email" name="entry.2102281431" placeholder="Email address">
         </div>
       </div>
       <div class="field">
         <label>Message</label>
-        <textarea name="Message" placeholder="What's on your mind?" rows="2"></textarea>
+        <textarea name="entry.222336924" placeholder="What's on your mind?" rows="2"></textarea>
       </div>
-      <div class="inline field">
-        <div class="ui checkbox">
-          <input type="checkbox" tabindex="0" class="hidden">
-          <label>I agree to the terms and conditions</label>
-        </div>
-      </div>
-      <input type="hidden" name="_subject" value="Featherweight Consulting Inquiry">
-      <input type="hidden" name="_next" value="/#thank-you">
-      <input type="text" name="_gotcha" style="display:none">
       <input type="submit" value="Send" class="ui submit button">
     </form>
   </div>
-</div>
+  
+  <div class="ui hidden section divider"></div>
 
-<div class="ui hidden section divider"></div>
+</div>
 
 <script type="text/javascript">
   var consultant_grid = document.getElementById("consultant_grid");
