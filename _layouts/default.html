@@ -81,11 +81,6 @@
     document.onreadystatechange = function () {
       if (this.readyState === "complete") {
       
-//        
-//        /*  Account for floated right-side menu height. */
-//        var contentMinHeight = $('.ftw-side-rail-menu').outerHeight();
-//        $('#ftw-site-content').css('min-height', contentMinHeight);
-        
         /*  Account for fixed-position header. A reasonable fixed height is already established,
             but this ensures that height is enough to acommodate the entire menu. */
         var contentPlacement = $('#ftw-site-menu').position().top + $('#ftw-site-menu').outerHeight();
