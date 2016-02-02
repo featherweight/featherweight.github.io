@@ -2,76 +2,74 @@
 layout: default
 ---
 
-<div class="ui text container">
-  
-  <article class="ui segment">
-    <div class="ui right close rail ftw-side-rail-menu">
-      <aside class="ui vertical menu">
-        <div class="item">
-          <a class="ui logo icon image" href="/">
-            <img src="/img/featherweight-logo-1024.png" alt="Featherweight Logo">
-          </a>
-        </div>
-        <div class="item">
-          <div class="ui search">
-            <div class="ui icon transparent input">
-              <input class="prompt" type="text" placeholder="Filter topics...">
-              <i class="search icon"></i>
-            </div>
-            <div class="results"></div>
-          </div>
-        </div>
-        {% for section in site.data.menu %}
-          <div class="item">
-            <div class="header">{{ section.title }}</div>
-            <!--Compressed vertical space below to generate better output from templating engine.-->
-            <div class="active content">{% for item_url in section.items %}
-                {% if item_url == page.url %}
-                  {% assign c = "active" %}
-                {% else %}
-                  {% assign c = "" %}
-                {% endif %}{% for p in site.docs %}{% if p.url == item_url %}<a class="item {{ c }}" href="{{ site.url }}{{ p.url }}">{{ p.menu }}</a>{% break %}{% endif %}{% endfor %}{% endfor %}
-            </div>
-          </div>
-        {% endfor %}
-      </aside>
-    </div>
-  
-  
-    <div class="ui right floated menu">
-      <a class="bug popup icon item" data-content="Improve This Page" href="https://github.com/featherweight/featherweight.github.io/edit/master/{{ page.relative_path }}">
-        <i class="edit icon"></i>
-      </a>
-      <a class="bug popup icon item" data-content="Submit Bug Report" href="https://github.com/featherweight/featherweight.github.io/issues/new?title=[Message] - Your Bug Name&amp;body=**Steps to Reproduce**%0A1. Do something%0A2. Do something else.%0A3. Do one last thing.%0A%0A**Expected**%0AThe Message should do this%0A%0A**Result**%0AThe Message does not do this%0A%0A**Testcase**%0A(fork this to get started)%0Ahttp://jsfiddle.net/rduvhn8u/1/">
-        <i class="bug icon"></i>
-      </a>
-      <a class="github popup icon item" data-content="View project on GitHub" href="https://github.com/Semantic-Org/Semantic-UI">
-        <i class="alternate github icon"></i>
-      </a>
-    </div>
-    <div class="ui clearing hidden fitted divider"></div>
-    <div class="linkify-headers">
-      <h1>{{ page.title }}</h1>
-      {{ content }}        
-      <div class="doc-authors">
-        <p class="meta">Page authors:</p>
-        {% for author in page.authors %}
-        <p class="doc-author">{{ author }}</p>
-        {% endfor %}
-        <p class="meta">Page editors:</p>
-        {% for editor in page.editors %}
-        <p class="doc-author">{{ editor }}</p>
-        {% endfor %}  
+<div class="ui stackable equal width grid container">
+  <div class="column"></div>
+  <div class="ten wide column">
+    <article class="ui fluid text container segment">
+      <div class="ui right floated menu">
+        <a class="bug popup icon item" data-content="Improve This Page" href="https://github.com/featherweight/featherweight.github.io/edit/master/{{ page.relative_path }}">
+          <i class="edit icon"></i>
+        </a>
+        <a class="bug popup icon item" data-content="Submit Bug Report" href="https://github.com/featherweight/featherweight.github.io/issues/new?title=[Message] - Your Bug Name&amp;body=**Steps to Reproduce**%0A1. Do something%0A2. Do something else.%0A3. Do one last thing.%0A%0A**Expected**%0AThe Message should do this%0A%0A**Result**%0AThe Message does not do this%0A%0A**Testcase**%0A(fork this to get started)%0Ahttp://jsfiddle.net/rduvhn8u/1/">
+          <i class="bug icon"></i>
+        </a>
+        <a class="github popup icon item" data-content="View project on GitHub" href="https://github.com/Semantic-Org/Semantic-UI">
+          <i class="alternate github icon"></i>
+        </a>
       </div>
-    </div>
-  </article>
-  
-  <div class="ui clearing hidden divider"></div>
-  
-  <div class="ui center aligned grid">
-    <div class="column">
+      <div class="ui clearing hidden fitted divider"></div>
+      <div class="linkify-headers">
+        <h1>{{ page.title }}</h1>
+        {{ content }}        
+        <div class="doc-authors">
+          <p class="meta">Page authors:</p>
+          {% for author in page.authors %}
+          <p class="doc-author">{{ author }}</p>
+          {% endfor %}
+          <p class="meta">Page editors:</p>
+          {% for editor in page.editors %}
+          <p class="doc-author">{{ editor }}</p>
+          {% endfor %}  
+        </div>
+      </div>
+    </article>
+    
+    <div class="ui clearing hidden divider"></div>
+    
+    <div class="ui center aligned basic segment">
       <a class="ui green labeled icon button" href="https://github.com/featherweight/featherweight.github.io/issues/new?title=[{{ page.title }}] consideration&amp;body=What's on your mind? Let's keep this discussion focused on a single consideration; feel free to open another case for additional considerations."><i class="conversation icon"></i>Comments? Discuss on GitHub.</a>
     </div>
+  </div>
+  <div class="column">
+    <aside class="ui vertical menu">
+      <div class="item">
+        <a class="ui logo icon image" href="/">
+          <img src="/img/featherweight-logo-1024.png" alt="Featherweight Logo">
+        </a>
+      </div>
+      <div class="item">
+        <div class="ui search">
+          <div class="ui icon transparent input">
+            <input class="prompt" type="text" placeholder="Filter topics...">
+            <i class="search icon"></i>
+          </div>
+          <div class="results"></div>
+        </div>
+      </div>
+      {% for section in site.data.menu %}
+        <div class="item">
+          <div class="header">{{ section.title }}</div>
+          <!--Compressed vertical space below to generate better output from templating engine.-->
+          <div class="active content">{% for item_url in section.items %}
+              {% if item_url == page.url %}
+                {% assign c = "active" %}
+              {% else %}
+                {% assign c = "" %}
+              {% endif %}{% for p in site.docs %}{% if p.url == item_url %}<a class="item {{ c }}" href="{{ site.url }}{{ p.url }}">{{ p.menu }}</a>{% break %}{% endif %}{% endfor %}{% endfor %}
+          </div>
+        </div>
+      {% endfor %}
+    </aside>
   </div>
 </div>
 
