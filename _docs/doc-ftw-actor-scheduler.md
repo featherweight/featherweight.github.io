@@ -2,7 +2,7 @@
 permalink: /docs/actor-job-scheduler/
 layout:    docs
 title:     Actor Instance Job Scheduler
-menu:      Actor Scheduler
+menu:      Actor Job Scheduler
 authors:
   - Jack R. Dunaway
 editors:
