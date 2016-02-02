@@ -1,8 +1,8 @@
 ---
-permalink: /docs/ftw-error/
+permalink: /docs/exception/
 layout:    docs
-title:     Error
-menu:      Error
+title:     Exception
+menu:      Exception
 authors:
   - Jack R. Dunaway
 editors:
