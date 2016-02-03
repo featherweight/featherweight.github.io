@@ -1,5 +1,5 @@
 ---
-permalink: /concepts/deployment/
+permalink: /deployment/
 layout:    docs
 title:     Deployment of FTW Applications
 menu:      Deployment

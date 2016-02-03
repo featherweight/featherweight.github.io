@@ -60,18 +60,18 @@ layout: default
           <div class="results"></div>
         </div>
       </div>
-      {% for section in site.data.menu %}
-        <div class="item">
-          <div class="header">{{ section.title }}</div>
-          <!--Compressed vertical space below to generate better output from templating engine.-->
-          <div class="active content">{% for item_url in section.items %}
-              {% if item_url == page.url %}
-                {% assign c = "active" %}
-              {% else %}
-                {% assign c = "" %}
-              {% endif %}{% for p in site.docs %}{% if p.url == item_url %}<a class="item {{ c }}" href="{{ site.url }}{{ p.url }}">{{ p.menu }}</a>{% break %}{% endif %}{% endfor %}{% endfor %}
-          </div>
+      <!--Compressed vertical space below to generate better output from templating engine.-->
+      {% for section in site.docs_menu %}
+      <div class="item">
+        <div class="header">{{ section.title }}</div>
+        <div class="active content">{% for item_url in section.items %}
+            {% for p in site.content %}{% if p.url == item_url %}{% if item_url == page.url %}
+              <a class="item active" href="{{ site.url }}{{ p.url }}">{{ p.menu }}</a>
+            {% else %}
+              <a class="item" href="{{ site.url }}{{ p.url }}">{{ p.menu }}</a>
+            {% endif %}{% break %}{% endif %}{% endfor %}{% endfor %}
         </div>
+      </div>
       {% endfor %}
     </aside>
   </div>
