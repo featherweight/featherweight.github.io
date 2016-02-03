@@ -1,13 +1,5 @@
 ---
 ---
-@mixin transition($transition...) {
-  -webkit-transition: $transition;
-     -moz-transition: $transition;
-       -o-transition: $transition;
-          transition: $transition;
-}
-
-/* Base */
 
 $ftw-color-highlight: #CE2A7A;
 $ftw-color-highlight-alt: #4BAA6D;
@@ -31,18 +23,16 @@ body {
 a {
   color: $ftw-color-highlight;
   text-decoration: none;
-  @include transition(all .25s);
-
+  transition: all .25s;
   &:hover {
     color: $ftw-color-highlight-hover;
   }
 }
 
 #ftw-site-menu {
-  border-top: 5px solid $ftw-color-highlight;
-
-  /*  Purely to prevent flicker: http://stackoverflow.com/a/20907500 */
+  /*  Purely to prevent flicker: http://stackoverflow.com/a/20907500  */
   -webkit-transform: translate3d(0,0,0);
+  border-top: 5px solid $ftw-color-highlight;
 }
 
 #ftw-site-footer {
@@ -54,53 +44,23 @@ a {
   color: $ftw-normal-text-on-darkbg-color;
 }
 
-.ui.icon.message>.icon:not(.close) {
-  width: 45px;
+.ui.icon.message>.icon.ftw-msg-icon {
+  width: 1em;
 }
 
-.header-link, .permalink {
+.ftw-permalink {
   color: $ftw-color-highlight-alt;
-  position: relative;
-  left: 0.5em;
-  opacity: 0.2;
-  font-size: 0.8em;
-  @include transition(opacity 0.25s);
-}
-h2:hover .header-link,
-h3:hover .header-link,
-h4:hover .header-link,
-h5:hover .header-link,
-h6:hover .header-link,
-h2:hover .permalink,
-h3:hover .permalink,
-h4:hover .permalink,
-h5:hover .permalink,
-h6:hover .permalink {
-  color: $ftw-color-highlight-alt-hover;
-  opacity: 1;
-}
-
-/* Article - Used for both docs and news */
-
-article {
-
-  h1, h2, h3 {
-
-    color: $ftw-color-highlight-alt;
-
-    a {
-      color: $ftw-color-highlight-alt;
-    }
-
-    a:hover {
-      color: $ftw-color-highlight-alt-hover;
-    }
+  .icon {
+    opacity: 0.4;
+    margin-left: 0.5em;
+    font-size: 0.8em;
+  }
+  &:hover {
+    color: $ftw-color-highlight-alt-hover;
   }
 }
 
-/* Documentation */
-
-.doc-authors {
+.ftw-doc-authors {
   color: $ftw-subtle-text-on-lightbg-color;
   font-size: 0.6em;
   padding-right: 1em;

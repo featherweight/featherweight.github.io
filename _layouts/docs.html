@@ -21,16 +21,16 @@ layout: default
       <div class="linkify-headers">
         <h1>{{ page.title }}</h1>
         {{ content }}
-        {% capture rendered_authors %}{% for author in page.authors %}{% if author != 'placeholder' and author !='' and author != null %}<p class="doc-author">{{ author }}</p>{% endif %}{% endfor %}{% endcapture %}
+        {% capture rendered_authors %}{% for author in page.authors %}{% if author != 'placeholder' and author !='' and author != null %}<p class="ftw-doc-author">{{ author }}</p>{% endif %}{% endfor %}{% endcapture %}
         {% if rendered_authors != '' %}
         <div class="ui hidden divider"></div>
-        <div class="doc-authors">
+        <div class="ftw-doc-authors">
           <p class="meta">Page authors:</p>{{ rendered_authors }}
         </div>
         {% endif %}
-        {% capture rendered_editors %}{% for editor in page.editors %}{% if editor != 'placeholder' and editor !='' and editor != null %}<p class="doc-author">{{ editor }}</p>{% endif %}{% endfor %}{% endcapture %}
+        {% capture rendered_editors %}{% for editor in page.editors %}{% if editor != 'placeholder' and editor !='' and editor != null %}<p class="ftw-doc-author">{{ editor }}</p>{% endif %}{% endfor %}{% endcapture %}
         {% if rendered_editors != '' %}
-        <div class="doc-authors">
+        <div class="ftw-doc-authors">
           <p class="meta">Page editors:</p>{{ rendered_editors }}
         </div>
         {% endif %}

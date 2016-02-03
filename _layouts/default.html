@@ -57,26 +57,8 @@
       </div>
     </div>
   </footer>
+
   <script>
-    var anchorForId = function (id) {
-      var anchor = document.createElement("a");
-      anchor.className = "header-link";
-      anchor.href      = "#" + id;
-      anchor.innerHTML = "<i class='link icon'></i>";
-      anchor.title = "Permalink";
-      return anchor;
-    };
-
-    var linkifyAnchors = function (level, containingElement) {
-      var headers = containingElement.getElementsByTagName("h" + level);
-      for (var h = 0; h < headers.length; h++) {
-        var header = headers[h];
-
-        if (typeof header.id !== "undefined" && header.id !== "") {
-          header.appendChild(anchorForId(header.id));
-        }
-      }
-    };
 
     document.onreadystatechange = function () {
       if (this.readyState === "complete") {
@@ -99,16 +81,12 @@
         $('#ftw-hire-button a').replaceWith(ftw_cta_array[ftw_cta_index]);
         $('#ftw-hire-button').transition('scale in');
 
-        var contentBlock = document.getElementsByClassName("linkify-headers")[0];
-        if (!contentBlock) {
-          return;
-        }
-        for (var level = 1; level <= 6; level++) {
-          linkifyAnchors(level, contentBlock);
-        }
+        $(".linkify-headers h1, .linkify-headers h2, .linkify-headers h3, .linkify-headers h4").wrapInner(function() {
+          return '<a class="ftw-permalink" href="#' + this.id + '" title="Permalink"></a>';
+        }).find('.ftw-permalink').append('<i class="linkify icon"></i>');
       }
-
     };
+
   </script>
 </body>
 </html>
