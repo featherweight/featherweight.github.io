@@ -10,8 +10,8 @@ $ftw-subtle-text-on-lightbg-color: #777;
 $ftw-normal-text-on-lightbg-color: #333;
 $ftw-normal-text-on-highlight-color: #EEE;
 
-$ftw-background-dark: url('../img/subtle-patterns-classy-fabric.png') #222;
-$ftw-background-light: url('../img/subtle-patterns-net.png') #EEE;
+$ftw-background-dark: url('/assets/img/subtle-patterns-classy-fabric.png') #222;
+$ftw-background-light: url('/assets/img/subtle-patterns-net.png') #EEE;
 
 body {
   background: $ftw-background-light;
