@@ -5,7 +5,7 @@ title:     Consultants
 menu:      Consultants
 ---
 
-<div class="ui text container">
+<div class="ui container">
 
   <p>Featherweight is built with good will and generosity, yet its development remains primarily a business pursuit. Consider hiring these world-class systems architects build your business and products.</p>
   <p>We know Featherweight inside and out, and we can work with you and your team to create systems beyond what even seems possible.</p>
@@ -14,7 +14,7 @@ menu:      Consultants
     <span>Loaded in random order</span>
   </div>
 
-  <div id="consultant_grid" class="ui three cards">
+  <div id="ftw_random_cards" class="ui four stackable link cards">
         <div class="ui card transition hidden">
           <div class="blurring dimmable image">
             <div class="ui dimmer">
@@ -42,7 +42,7 @@ menu:      Consultants
         </div>
 
 
-        <div class="ui card transition">
+        <div class="ui card transition hidden">
           <div class="blurring dimmable image hidden">
             <div class="ui dimmer">
               <div class="content">
@@ -68,7 +68,7 @@ menu:      Consultants
           </div>
         </div>
 
-        <div class="ui card transition">
+        <div class="ui card transition hidden">
           <div class="blurring dimmable image hidden">
             <div class="ui dimmer">
               <div class="content">
@@ -94,7 +94,7 @@ menu:      Consultants
           </div>
         </div>
 
-        <div class="ui card transition">
+        <div class="ui card transition hidden">
           <div class="blurring dimmable image hidden">
             <div class="ui dimmer">
               <div class="content">
@@ -122,62 +122,32 @@ menu:      Consultants
   </div>
 
   <div class="ui center aligned vertical segment">
-    <button id="button_randomize" class="ui compact small button" href="/consultants/"><i class="refresh icon"></i>Shuffle</button>
+    <button id="ftw_card_randomizer" class="ui compact small button"><i class="refresh icon"></i>Shuffle</button>
   </div>
 
   <div class="ui hidden section divider"></div>
-
-  <div class="ui segment">
-    <form action="https://docs.google.com/forms/d/1i_m5rp6xwGww6Vn7IE4wCv4BIiH3gzi9MA9LLU4KH0E/formResponse" method="POST" class="ui form" target="ftw-result">
-      <div class="two fields">
-        <div class="field">
-          <label>Name</label>
-          <input type="text" name="entry.847528909" placeholder="Your name">
+  <div class="ui text container">
+    <div class="ui segment">
+      <form action="https://docs.google.com/forms/d/1i_m5rp6xwGww6Vn7IE4wCv4BIiH3gzi9MA9LLU4KH0E/formResponse" method="POST" class="ui form" target="ftw-result">
+        <div class="two fields">
+          <div class="field">
+            <label>Name</label>
+            <input type="text" name="entry.847528909" placeholder="Your name">
+          </div>
+          <div class="field">
+            <label>Email</label>
+            <input type="email" name="entry.2102281431" placeholder="Email address">
+          </div>
         </div>
         <div class="field">
-          <label>Email</label>
-          <input type="email" name="entry.2102281431" placeholder="Email address">
+          <label>Message</label>
+          <textarea name="entry.222336924" placeholder="What's on your mind?" rows="2"></textarea>
         </div>
-      </div>
-      <div class="field">
-        <label>Message</label>
-        <textarea name="entry.222336924" placeholder="What's on your mind?" rows="2"></textarea>
-      </div>
-      <input type="submit" value="Send" class="ui submit button">
-    </form>
+        <input type="submit" value="Send" class="ui submit button">
+      </form>
+    </div>
   </div>
 
   <div class="ui hidden section divider"></div>
 
 </div>
-
-<script type="text/javascript">
-  var consultant_grid = document.getElementById("consultant_grid");
-  var cards = consultant_grid.children;
-  var frag = document.createDocumentFragment();
-
-  function randomize_grid() {
-    var element;
-    var i = 0;
-
-    while (cards.length) {
-      element = cards[Math.floor(Math.random() * cards.length)];
-      element.classList.add("hidden");
-      element.classList.remove("visible");
-      frag.appendChild(element);
-      i++;
-    }
-    consultant_grid.appendChild(frag);
-
-    $('#consultant_grid .card').transition({
-        animation : 'scale',
-        interval  : 200
-      });
-  }
-
-  document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById("button_randomize").addEventListener('click', randomize_grid);
-    randomize_grid();
-  }, false);
-
-</script>

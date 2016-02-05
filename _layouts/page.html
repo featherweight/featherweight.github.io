@@ -5,3 +5,34 @@ layout: default
 <article>
   {{ content }}
 </article>
+
+
+<script type="text/javascript">
+  var ftw_random_cards = document.getElementById("ftw_random_cards");
+  var ftw_cards = ftw_random_cards.children;
+  var frag = document.createDocumentFragment();
+
+  function randomize_grid() {
+    var element;
+    var i = 0;
+
+    while (ftw_cards.length) {
+      element = ftw_cards[Math.floor(Math.random() * ftw_cards.length)];
+      element.classList.add("hidden");
+      element.classList.remove("visible");
+      frag.appendChild(element);
+      i++;
+    }
+    ftw_random_cards.appendChild(frag);
+
+    $('#ftw_random_cards .card').transition({
+        animation : 'scale',
+        interval  : 100
+      });
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById("ftw_card_randomizer").addEventListener('click', randomize_grid);
+    randomize_grid();
+  }, false);
+</script>
