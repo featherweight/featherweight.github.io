@@ -26,6 +26,15 @@ a {
   }
 }
 
+.ui.inverted.segment, .ui.inverted.menu {
+  background: $ftw-background-dark;
+  color: $ftw-normal-text-on-darkbg-color;
+}
+
+.ui.icon.message>.icon.ftw-msg-icon {
+  width: 1em;
+}
+
 #ftw-site-menu {
   /*  Purely to prevent flicker: http://stackoverflow.com/a/20907500  */
   -webkit-transform: translate3d(0,0,0);
@@ -36,13 +45,8 @@ a {
   border-bottom: 5px solid $ftw-color-highlight-alt;
 }
 
-.ui.inverted.segment, .ui.inverted.menu {
-  background: $ftw-background-dark;
-  color: $ftw-normal-text-on-darkbg-color;
-}
-
-.ui.icon.message>.icon.ftw-msg-icon {
-  width: 1em;
+article h1 {
+  color: $ftw-color-highlight-alt;
 }
 
 .ftw-permalink {

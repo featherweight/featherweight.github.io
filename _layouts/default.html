@@ -86,7 +86,7 @@
         $('#ftw-hire-button a').replaceWith(ftw_cta_array[ftw_cta_index]);
         $('#ftw-hire-button').transition('scale in');
 
-        $(".linkify-headers h1, .linkify-headers h2, .linkify-headers h3, .linkify-headers h4").wrapInner(function() {
+        $(".linkify-headers h2, .linkify-headers h3, .linkify-headers h4").wrapInner(function() {
           return '<a class="ftw-permalink" href="#' + this.id + '" title="Permalink"></a>';
         }).find('.ftw-permalink').append('<i class="linkify icon"></i>');
       }
