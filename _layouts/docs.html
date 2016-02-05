@@ -24,15 +24,15 @@ layout: default
         {% capture rendered_authors %}{% for author in page.authors %}{% if author != 'placeholder' and author !='' and author != null %}<p class="ftw-doc-author">{{ author }}</p>{% endif %}{% endfor %}{% endcapture %}
         {% if rendered_authors != '' %}
         <div class="ui hidden divider"></div>
-        <div class="ftw-doc-authors">
+        <a class="ftw-doc-authors" href="/contributors">
           <p class="meta">Page authors:</p>{{ rendered_authors }}
-        </div>
+        </a>
         {% endif %}
         {% capture rendered_editors %}{% for editor in page.editors %}{% if editor != 'placeholder' and editor !='' and editor != null %}<p class="ftw-doc-author">{{ editor }}</p>{% endif %}{% endfor %}{% endcapture %}
         {% if rendered_editors != '' %}
-        <div class="ftw-doc-authors">
+        <a class="ftw-doc-authors" href="/contributors">
           <p class="meta">Page editors:</p>{{ rendered_editors }}
-        </div>
+        </a>
         {% endif %}
 
       </div>
