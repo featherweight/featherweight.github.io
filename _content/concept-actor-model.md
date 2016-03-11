@@ -9,14 +9,14 @@ editors:
   - Eric Metzler
 ---
 
-Featherweight provides an Actor Reference Design implementation
-for actor-oriented development (AOD) in LabVIEW.
+Featherweight provides an Actor Reference Design implementation for
+actor-oriented development (AOD) in LabVIEW.
 
 This reference design is not related to NI Actor Framework (NI-AF). The
 FTW Actor Model more closely resembles design principles, tenets, and components
 from Akka, an actor framework for Scala and Java.
 
-{ include note.html type="warning" text="Note to NI Actor Framework Users: FTW actors are different." }
+{% include note.html type="warning" title="" body="The FTW Actor is different in a few ways from the NI Actor Framework Actor." %}
 
 
 ## FTW Actor Decomposition
@@ -25,7 +25,7 @@ A FTW Actor has several components, some of which are optional:
 
 ### Incoming Message Inbox
 
-An Actor Instance has one or more [1, N) Incoming Message Inboxes.
+An Actor Instance has precisely one Incoming Message Inboxes.
 These in
 
 ### Job Scheduler
@@ -54,9 +54,9 @@ Sockets.
 An Actor may be a Subscriber, receiving messages on one or more Subscriber
 sockets.
 
-An Actor may be a Producer, pushing messages into a message queue.
+An Actor may be a Producer, pushing messages into one or more message queues.
 
-An Actor may be a Consumer, pulling messages from a message queue.
+An Actor may be a Consumer, pulling messages from one or more message queues.
 
 ### Connector
 An Actor Instance exposes its "Published API" as a conceptual document
@@ -73,7 +73,7 @@ actor if/when it is desirable to expose unique subsets of the Actor's
 full capabilities (nominally, to make programming easier by providing
 fit-for-purpose APIs based on application domain).
 
-{ include note.html type="protip" text="An Actor Instance is decoupled from an Actor Connector, meaning clients are not statically linked to dependencies of the actor. This enables remoting and location transparency, and also makes clients smaller. The tradeoff is a slightly larger codebase, and the possibility to introduce developer errors due to string-typing." }
+{% include note.html type="protip" body="An Actor Instance is decoupled from an Actor Connector, meaning clients are not statically linked to dependencies of the actor. This enables remoting and location transparency, and also makes clients smaller. The tradeoff is a slightly larger codebase, and the possibility to introduce developer errors due to string-typing." %}
 
 ## FTW Actors vs. NI Actor Framework
 
@@ -105,6 +105,10 @@ One advantage to combining the queues is simplicity to develop and debug.
 One disadvantage is that the simplicity is suited for simple systems, and
 does not readily scale to more complex or nuanced systems.
 
+The Actor Reference Design in FTW distinguishes the Job Scheduling from the
+Incoming Message Handling. This important degree of separation enables actors
+to respond more naturally and maintain control of their own health.
+
 Take for example Nagle's algorithm in networking. It states that many small
 finite bits of work will be aggregated for a period of time before dispatching
 a larger chunk of work, because the overhead of each atomic piece
@@ -134,4 +138,4 @@ Most QMH reference designs do not
 
 
 
-{ include note.html type="warning" text="" }
+{% include note.html type="warning" body="" %}
