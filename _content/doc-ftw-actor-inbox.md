@@ -129,7 +129,7 @@ If codified, perhaps consider this heuristic: as expectation of success becomes
 more and more probable, it's OK to tune the "paranoid" knob lower; as cost
 of failure increases, tune the "paranoid" knob higher. "Paranoid", meaning additional
 procedure and requisite syntax to develop and maintain as a remedy for
-or reaction to forseen failure modes.
+or reaction to foreseen failure modes.
 
 ### Design patterns and idioms for mitigating failure
 
@@ -145,7 +145,7 @@ cleared between two publish periods, the receiver would receive two subsequent
 messages stating that "OverVoltage" is false except that "OverVoltageOccurences"
 has incremented by one.
 
-{ include note.html type="notice" title="Remember" text="Continually publishing messages is one method of mitigating lost message, but even (and perhaps, especially these since bandwidth is increased) these messages may be lost." }
+{% include note.html type="notice" title="Remember" body="Continually publishing messages is one method of mitigating lost message, but even (and perhaps, especially these since bandwidth is increased) these messages may be lost." %}
 
 ## Tips on Dividing Applications into Actors
 
@@ -200,7 +200,7 @@ continually publishes measurement data, or has a Request/Reply semantic
 implementing "Get Voltage" and "Get Current", or perhaps "Get Measurement" that
 returns a structure of both measurements.
 
-{ include note.html type="notice" title="Cool tip (need sunglasses glyph)" text="Instruments with remote control protocols map exceptionally well to Actor Systems. They typically maintain their own health (e.g., a 10W power supply might return an error if commanded to 1 megawatt), define a published interface" }
+{% include note.html type="notice" title="Cool tip (need sunglasses glyph)" body="Instruments with remote control protocols map exceptionally well to Actor Systems. They typically maintain their own health (e.g., a 10W power supply might return an error if commanded to 1 megawatt), define a published interface" %}
 
 #### Do the two physical channels have an implicit shared resource - time?
 
@@ -234,7 +234,7 @@ An Actor, on the other hand, has:
 
 This is the list of messages
 
-{ include note.html type="notice" title="Note" text="The Featherweight Framework defines a few framework-level messages" }
+{% include note.html type="notice" title="Note" body="The Featherweight Framework defines a few framework-level messages" %}
 
 ### Published Data
 An actor is able to broadcast arbitrary data to remote endpoint(s) who
@@ -252,4 +252,4 @@ The Actor Reference Design in Featherweight allows inheritance. The simplest
 example is how application specific Actors you write will likely inherit from
 `FTW-Actor.lvclass`.
 
-{ include note.html type="warning" title="Heads up!" text="It's possible to create your own reference designs that compose and wrap core FTW-ActorInstance functions, but this is not necessarily recommended. " }
+{% include note.html type="warning" title="Heads up!" body="It's possible to create your own reference designs that compose and wrap core FTW-ActorInstance functions, but this is not necessarily recommended." %}

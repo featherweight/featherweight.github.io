@@ -46,7 +46,6 @@ docs_menu:
   - /docs/actor-supervisor/
   - /docs/actor-message/
   - /docs/actor-job-scheduler/
-  - /docs/actor-job/
   - /docs/actor-socket-publisher-subscriber/
   - /docs/actor-socket-producer-consumer/
 

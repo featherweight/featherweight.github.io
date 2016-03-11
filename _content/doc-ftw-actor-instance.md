@@ -24,7 +24,7 @@ of the Actor Connector class.
 
 To launch multiple instances of an actor
 
-{ include note.html type="notice" title="Note" text="When launching multiple instances of an Actor, ensure the Actor Process is reentrant. Very likely, instance methods should be reentrant as well, and very likely to avoid " }
+{% include note.html type="protip" title="Protip: Actor Instance Reentrancy" body="When launching multiple instances of an Actor, ensure the Actor Process is reentrant. All instance methods should most likely be reentrant as well. As with typical reentrant design, static variables (such as uninitialized shift registers) and calls to non-reentrant blocking functions should be avoided." %}
 
 An Actor Instance communicates with other Actor Instances
 (or generally, other nodes capable of communicated with Actor
@@ -45,86 +45,226 @@ The simplest way to launch an Actor is  Actor Process will
 
 ## Actor Instance Configuration
 
-<div class="mobile-side-scroller">
-<table>
+
+### Quick Reference
+<table class="ui celled table">
   <thead>
     <tr>
-      <th>Variable</th>
-      <th>Description</th>
+      <th>Configuration Element</th>
+      <th>JSON Type</th>
+      <th>Default Value</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td><p><code>ID</code></p></td>
-      <td><p>Uniquely identifies</p></td>
+      <td><code><b>Identity</b></code></td>
+      <td>String (recommended)</td>
+      <td><code>"FTW-Unnamed-Actor"</code></td>
     </tr>
     <tr>
-      <td><p><code>InboxConfiguration</code></p></td>
-      <td><p>Ruleset that governs how the actor reacts to Ask and Tell requests from remote actors. Each inbox in the array includes address where it listens for requests, its priority with respect to other inboxes, and message handling semantics for different message types.</p></td>
+      <td><code>InboxAddress</code></td>
+      <td>String (required)</td>
+      <td>-</td>
     </tr>
     <tr>
-      <td><p><code>content</code></p></td>
-      <td><p>
-
-        In layout files, the rendered content of the Post or Page being wrapped.
-        Not defined in Post or Page files.
-
-      </p></td>
+      <td><code>InboxConfiguration</code></td>
+      <td><a href="../actor-inbox/">Inbox Object</a></td>
+      <td><a href="../actor-inbox/">Default Inbox</a></td>
     </tr>
     <tr>
-      <td><p><code>paginator</code></p></td>
-      <td><p>
-
-        When the <code>paginate</code> configuration option is set, this
-        variable becomes available for use. See <a
-        href="../pagination/">Pagination</a> for details.
-
-      </p></td>
+      <td><code>SupervisorAddress</code></td>
+      <td>String (recommended)</td>
+      <td><code>""</code></td>
+    </tr>
+    <tr>
+      <td><code>DebugEnableInboxLogging</code></td>
+      <td>Boolean</td>
+      <td><code>false</code></td>
+    </tr>
+    <tr>
+      <td><code>DebugEnableJobLogging</code></td>
+      <td>Boolean</td>
+      <td><code>false</code></td>
+    </tr>
+    <tr>
+      <td><code>DebugShowPanel</code></td>
+      <td>Boolean</td>
+      <td><code>false</code></td>
+    </tr>
+    <tr>
+      <td><code>HandshakeTimeout</code></td>
+      <td>Integer (optional)</td>
+      <td><code>500 (milliseconds)</code></td>
+    </tr>
+    <tr>
+      <td><code>InitializationTimeout</code></td>
+      <td>Integer (recommended)</td>
+      <td><code>500 (milliseconds)</code></td>
+    </tr>
+    <tr>
+      <td><code>LauncherAddress</code></td>
+      <td>String (optional)</td>
+      <td><code>"tcp://127.0.0.1:*"</code></td>
     </tr>
   </tbody>
 </table>
-</div>
+
+### Configuration Details
+
+#### Identity
+Uniquely identifies an Actor Instance using a programmer-friendly naming scheme.
+Used primarily for logging. FTW neither requires nor enforces uniqueness.
+
+#### InboxAddress
+Primary inbox address of the actor instance.
+
+#### InboxConfiguration
+Ruleset that governs how the actor reacts to Ask and Tell requests from remote
+actors. Each inbox in the array includes address where it listens for requests,
+its priority with respect to other inboxes, and message handling semantics for
+different message types.
+
+{% include note.html type="security" title="Default is permissive" body="The default values here are permissive, allowing all messages to be routed directly from the Inbox to the Instance." %}
+
+
+#### SupervisorAddress
+
+
+#### DebugEnableInboxLogging
+
+
+#### DebugEnableJobLogging
+
+
+#### DebugShowPanel
+When `true`, the instance launched will show its front panel.
+
+This debugging feature is not intended for to be used as an application facility
+for showing user interfaces to users, but rather it is intended for developers
+to interactively debug an Actor Instance.
+
+#### HandshakeTimeout
+
+#### InitializationTimeout
+It is recommended to always explicitly set this value.
+
+Choosing an optimal timeout value is not always simple, and that optimal value
+will likely even change during the development cycle of the Actor Instance. Some
+considerations when choosing this value:
+
+* span of time required by Actor Instance to initialize, also accounting for
+jitter and non-deterministic tasks (e.g., initializing hardware, connecting to
+other actors, connecting to a database, ...)
+* IDE with debugging versus RTE with debugging off
+* load time if dynamically launching from disk
+* target resource availability (especially CPU)
+
+
+{% include note.html type="protip" title="Watch out for JIT compile time" body="When dynamically launching in the IDE, ensure that the Actor Instance and its static dependencies are already compiled for the current target. Opening a reference dynamically to source code that is not yet compiled for the current target will trigger a just-in-time compile which may add an unexpectedly long delay to the launch of the Actor. Unlike an intentional compile (triggered by opening the source in the IDE, or by mass compiling the project or source directory), this JIT compile is not cached by the environment, meaning that same penalty will continue to be incurred for subsequent launches." %}
+
+
+#### LauncherAddress
+
+{% include note.html type="notice" title="Note" body="The Featherweight Framework defines a few framework-level messages" %}
+
+
+### Typical Example
+{% highlight javascript %}
+{
+  "Identity": "FeatherweightActorExample",
+  "InboxAddress": "tcp://127.0.0.1:*",
+  "HandshakeTimeout": 1000,
+  "DebugShowPanel": false
+}
+{% endhighlight %}
+
+{% include note.html type="protip" title="Convenient placeholders" body="Configuration elements such as `DebugShowPanel` are often kept as part of the configuration, not because it is explicitly necessary to specify, but because it is convenient to toggle during development." %}
+
+### Minimal Example
+{% highlight javascript %}
+{"InboxAddress":"ws://127.0.0.1:5555"}
+{% endhighlight %}
+
+Yep, that's it. The only configuration required to launch a FTW Actor Instance
+is a valid, available InboxAddress.
+
+### Full Example with InboxConfiguration
+{% highlight javascript %}
+{
+  "Identity": "FeatherweightActorExample",
+  "InboxAddress": "tcp://127.0.0.1:*",
+  "InboxConfiguration": {
+    "MaxMessageSize": 100000,
+    "AdditionalServiceEndpoints": {
+      "Primary": "tcp://127.0.0.1:*",
+      "RemoteClients": "ws://*:*"
+    },
+    "MessageRoutingRules": {
+      "FTW-PoisonPill": {
+        "Accept": true,
+        "Reject": false
+      },
+      "FTW-ActorStatus": {
+        "Accept": true,
+        "Reject": false,
+        "BusyTimeout": 100,
+        "ResponseIncludesIdentity": true,
+        "ResponseIncludesTimestamp": true,
+        "ResponseIncludesRelativeTimer": true
+      },
+      "Default": {
+        "Accept": false,
+        "Reject": false,
+        "BusyTimeout": -1,
+        "ResponseIncludesIdentity": true,
+        "ResponseIncludesTimestamp": true,
+        "ResponseIncludesRelativeTimer": true
+      }
+    }
+  }
+  "HandshakeTimeout": 1000,
+  "DebugEnableInboxLogging": false,
+  "DebugEnableJobLogging": false,
+  "DebugShowPanel": false
+}
+{% endhighlight %}
+
 
 ## Framework Jobs
 
-<div class="mobile-side-scroller">
-<table>
+<table class="ui celled table">
   <thead>
     <tr>
-      <th>Job</th>
-      <th>Description</th>
+      <th class="single line">Job</th>
+      <th class="">Description</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td><p><code>FTW: Message Handler</code></p></td>
-      <td><p>Placeholder</p></td>
+      <td class="single line"><code>FTW-Job-HandleIncomingRequest</code></td>
+      <td>Placeholder</td>
     </tr>
     <tr>
-      <td><p><code>FTW: Exception Handler</code></p></td>
-      <td><p>Placeholder</p></td>
+      <td class="single line"><code>FTW-Job-HandleException</code></td>
+      <td>Placeholder</td>
     </tr>
     <tr>
-      <td><p><code>FTW: Failure to Launch</code></p></td>
-      <td><p>Ruleset that governs how the actor reacts to Ask and Tell requests from remote actors. Each inbox in the array includes address where it listens for requests, its priority with respect to other inboxes, and message handling semantics for different message types.</p></td>
+      <td class="single line"><code>FTW-Job-FailureToLaunch</code></td>
+      <td>Ruleset that governs how the actor reacts to Ask and Tell requests from remote actors. Each inbox in the array includes address where it listens for requests, its priority with respect to other inboxes, and message handling semantics for different message types.</td>
     </tr>
     <tr>
-      <td><p><code>FTW: Exception Handler</code></p></td>
-      <td><p>Placeholder</p></td>
+      <td class="single line"><code>FTW-Job-Shutdown</code></td>
+      <td>Placeholder</td>
     </tr>
     <tr>
-      <td><p><code>paginator</code></p></td>
-      <td><p>
-
-        When the <code>paginate</code> configuration option is set, this
-        variable becomes available for use. See <a
-        href="../pagination/">Pagination</a> for details.
-
-      </p></td>
+      <td class="single line"><code>FTW: Exception Handler</code></td>
+      <td>Placeholder</td>
     </tr>
   </tbody>
 </table>
-</div>
+
+{% include note.html type="protip" title="Job section dividers in the case label" body="The job dividers (e.g., `--- Actor-Specific Jobs ---`) not only act as section dividers between different types of jobs in the FTW Actor Instance, but also act as convenient templates to duplicate as new jobs are created. This convenience is directly adapted from best-practice recommendations from the JKI State Machine." %}
+
 
 ## Centrality of Data
 
@@ -152,7 +292,7 @@ the messages in the same order as being sent.
 
 For those of us who
 
-## Cost of Failure vs Reasonable Expections
+## Cost of Failure vs Reasonable Expectations
 
 The principles of Actor-Oriented design are not necessarily absolute rules.
 
@@ -181,7 +321,7 @@ If codified, perhaps consider this heuristic: as expectation of success becomes
 more and more probable, it's OK to tune the "paranoid" knob lower; as cost
 of failure increases, tune the "paranoid" knob higher. "Paranoid", meaning additional
 procedure and requisite syntax to develop and maintain as a remedy for
-or reaction to forseen failure modes.
+or reaction to foreseen failure modes.
 
 ### Design patterns and idioms for mitigating failure
 
@@ -197,7 +337,7 @@ cleared between two publish periods, the receiver would receive two subsequent
 messages stating that "OverVoltage" is false except that "OverVoltageOccurences"
 has incremented by one.
 
-{ include note.html type="notice" title="Remember" text="Continually publishing messages is one method of mitigating lost message, but even (and perhaps, especially these since bandwidth is increased) these messages may be lost." }
+{% include note.html type="protip" title="Remember" body="Continually publishing messages is one method of mitigating lost message, but even (and perhaps, especially these since bandwidth is increased) these messages may be lost." %}
 
 ## Tips on Dividing Applications into Actors
 
@@ -286,7 +426,7 @@ An Actor, on the other hand, has:
 
 This is the list of messages
 
-{ include note.html type="notice" title="Note" text="The Featherweight Framework defines a few framework-level messages" }
+{% include note.html type="notice" title="Note" body="The Featherweight Framework defines a few framework-level messages" %}
 
 ### Published Data
 An actor is able to broadcast arbitrary data to remote endpoint(s) who
@@ -304,4 +444,4 @@ The Actor Reference Design in Featherweight allows inheritance. The simplest
 example is how application specific Actors you write will likely inherit from
 `FTW-Actor.lvclass`.
 
-{ include note.html type="warning" title="Heads up!" text="It's possible to create your own reference designs that compose and wrap core FTW-ActorInstance functions, but this is not necessarily recommended. " }
+{% include note.html type="warning" title="Heads up!" body="It's possible to create your own reference designs that compose and wrap core FTW-ActorInstance functions, but this is not necessarily recommended." %}
