@@ -9,4 +9,4 @@ editors:
   - placeholder
 ---
 
-placeholder
+Featherweight provides a basic HTTP client for making requests to web servers.

@@ -19,7 +19,7 @@ platforms.
 Featherweight tests double as example usage of all framework
 abilities.
 
-{ include note.html type="protip" text="If you are new to Featherweight, start by perusing the tests. They double as examples, contain clarifying commentary on behavior, and illustrate framework abilities." }
+{% include note.html type="protip" body="If you are new to Featherweight, start by perusing the tests. They double as examples, contain clarifying commentary on behavior, and illustrate framework abilities." %}
 
 ## Running the Tests from the IDE
 
@@ -48,7 +48,7 @@ application in order to perform tests at run-time.
 
 Additionally,
 
-{ include note.html type="warning" text="Featherweight Test is not intended to be a full-featured test runner." }
+{% include note.html type="warning" body="Featherweight Test is not intended to be a full-featured test runner." %}
 
 ## Interpreting the Test Report
 
