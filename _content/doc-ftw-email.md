@@ -9,4 +9,5 @@ editors:
   - placeholder
 ---
 
-placeholder
+If a framework is around long enough, it will eventually send email.
+Featherweight does not yet send email.
