@@ -7,14 +7,6 @@
       <p>{{include.body}}</p>
     </div>
   </div>
-{% when 'info' %}
-  <div class="ui icon info message">
-    <i class="ftw-msg-icon icon info circle"></i>
-    <div class="content">
-      <div class="header">{{include.title}}</div>
-      <p>{{include.body}}</p>
-    </div>
-  </div>
 {% when 'contribute' %}
   <div class="ui icon positive message">
     <i class="ftw-msg-icon icon fork"></i>
@@ -40,4 +32,11 @@
     </div>
   </div>
 {% else %}
+  <div class="ui icon info message">
+    <i class="ftw-msg-icon icon info circle"></i>
+    <div class="content">
+      <div class="header">{{include.title}}</div>
+      <p>{{include.body}}</p>
+    </div>
+  </div>
 {% endcase %}
