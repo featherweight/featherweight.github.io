@@ -38,8 +38,10 @@ a list of such useful repositories.
 
 ### Might the feature be useful, yet promote abuse?
 
-One concrete example might be the choice between CSV versus JSON
-or SQLite
+One concrete example might be the choice of INI over JSON as a configuration
+format, or CSV over SQLite for a persistence format. INI and CSV are specific
+examples of widespread (and ostensibly, desirable) protocols that don't serve
+as well as better protocols, and therefore will not be included into Featherweight.
 
 ### Legacy versus future-proof
 
@@ -49,4 +51,18 @@ future trajectory of that protocol.
 
 ### Too hip?
 
-If a particular library is only used by the cool cats, but no
+The opposite of legacy, if a particular library or protocol or design pattern is
+only used by the cool kids, but has not yet proven itself over the test of time,
+or especially if it appears a competitor will be the market winner, we'll sit on
+the decision for a while.
+
+Once a feature is in, it's hard to take out, so it'd best reside as a separate
+library in the meantime.
+
+One notable example is choosing a binary serialization protocol, such as BSON,
+protobuf, or msgpack. Even having watched these protocols since Featherweight had
+just hatched in 2012, now at the time of writing years later, it remains unclear
+if one should be chosen for inclusion into Featherweight. (Sidenote: why not all?
+Since Featherweight strives to provide a curated set of orthogonal tools, where
+inclusion of multiple similar functionalities is a non-goal.) Additionally, their
+value-add over JSON remains arguable across the spectrum of considerations.
