@@ -113,6 +113,10 @@ experience to be successful. It is because Featherweight is designed
 for building non-trivial sized applications and distributed systems
 using LabVIEW, and this application area can be inherently complex.
 
+When there exist forks in the Featherweight Framework design decision tree, the
+success and productivity of an advanced developer is prioritized over
+approachability of a budding developer.
+
 One explicit design goal of Featherweight is to be usable for CLD-level
 developers, and to provide a seamless learning experience from here to
 CLA-level and beyond.
