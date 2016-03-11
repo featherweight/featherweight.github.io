@@ -26,7 +26,7 @@ a {
   }
 }
 
-.ui.inverted.segment, .ui.inverted.menu {
+.ui.inverted.segment, .ui.inverted.menu, .inverted.header {
   background: $ftw-background-dark;
   color: $ftw-normal-text-on-darkbg-color;
 }
@@ -73,4 +73,8 @@ article h1 {
     display: inline;
     margin-left: 0.5em;
   }
+}
+
+.ftw-partner-cards .header .image {
+  height: 100px;
 }
