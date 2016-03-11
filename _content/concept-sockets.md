@@ -27,8 +27,7 @@ that appear to be actors) in other languages and execution systems.
 
 Each FTW Socket topology offers four types of
 
-<div class="mobile-side-scroller">
-<table>
+<table class="ui celled table">
   <thead>
     <tr>
       <th>Scheme</th>
@@ -37,38 +36,22 @@ Each FTW Socket topology offers four types of
   </thead>
   <tbody>
     <tr>
-      <td><p><code>tcp://</code></p></td>
-      <td><p>
-
-        Actors
-
-      </p></td>
+      <td><code>tcp://</code></td>
+      <td>Actors</td>
     </tr>
     <tr>
-      <td><p><code>ws://</code></p></td>
-      <td><p>
-
-        Ruleset that governs how the actor reacts to Ask and Tell requests from remote actors. Each inbox in the array includes address where it listens for requests, its priority with respect to other inboxes, and message handling semantics for different message types.
-      </p></td>
+      <td><code>ws://</code></td>
+      <td>Ruleset that governs how the actor reacts to Ask and Tell requests from remote actors. Each inbox in the array includes address where it listens for requests, its priority with respect to other inboxes, and message handling semantics for different message types.</td>
     </tr>
     <tr>
-      <td><p><code>ipc://</code></p></td>
-      <td><p>
-
-        Inter-process communication using OS-level messaging facilities (nominally, pipes) for inter-application communication on the same compute target.
-
-      </p></td>
+      <td><code>ipc://</code></td>
+      <td>Inter-process communication using OS-level messaging facilities (nominally, pipes) for inter-application communication on the same compute target.</td>
     </tr>
     <tr>
-      <td><p><code>inproc://</code></p></td>
-      <td><p>
-
-        In-process transactional memory for communication within the same application space and execution context. This is nominally the fastest, but also the least flexible with regard to location transparency.
-
-      </p></td>
+      <td><code>inproc://</code></td>
+      <td>In-process transactional memory for communication within the same application space and execution context. This is nominally the fastest, but also the least flexible with regard to location transparency.</td>
     </tr>
   </tbody>
 </table>
-</div>
 
-{ include note.html type="protip" text="Consider " }
+{% include note.html type="protip" body="Consider " %}
