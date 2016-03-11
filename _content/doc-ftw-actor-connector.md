@@ -78,10 +78,6 @@ As of writing, "Actor Connector" was chosen,
 Nominally, the class is called an "Actor Connector", and once instantiated
 as an object is an "Actor Connection" (even if not yet connected).
 
-{ include note.html type="warning" title="UTF-8 Character Encoding Warning" text="If you use UTF-8 encoding, make sure that no <code>BOM</code> header characters exist in your files or very, very bad things will happen to Jekyll. This is especially relevant if you’re running <a href='../windows/'>Jekyll on Windows</a>." }
-
-{ include note.html type="notice" title="ProTip™: Front Matter Variables Are Optional" text="If you want to use <a href='../variables/'>Liquid tags and variables</a> but don’t need anything in your front matter, just leave it empty! The set of triple-dashed lines with nothing in between will still get Jekyll to process your file. (This is useful for things like CSS and RSS feeds!)" }
-
 ## Does every `FTW Actor Instance` also need a connector?
 
 No. A `FTW Actor Instance` selectively declares (or chooses not to declare!)
